@@ -1,171 +1,205 @@
 <!doctype html>
-<html class="no-js" lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Foundation</title>
-    <link rel="stylesheet" href="stylesheets/app.css" />
-    <script src="bower_components/modernizr/modernizr.js"></script>
-  </head>
-  <body>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="stylesheets/app.css" />
+  <title>Alina To - Violin</title>
+  <!-- custom fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Fredericka+the+Great|Pompiere' rel='stylesheet' type='text/css'>
+  <script src="bower_components/modernizr/modernizr.js"></script>
+
+</head>
+
+<body>
+
+  <!-- =====
+  Default Landing Page
+  ===== -->
+
+  <script type="text/x-handlebars">
     <div class="row">
       <div class="large-12 columns">
-        <h1>Welcome to Foundation</h1>
+        <div class="panel callout success">
+          <a href="#">
+          <h1>Alina To</h1>
+          <h3>Seattle-based Violnist</h3>
+          </a>
+        </div>
       </div>
     </div>
-    
     <div class="row">
-      <div class="large-12 columns">
-        <div class="panel">
-          <h3>We&rsquo;re stoked you want to try Foundation! </h3>
-          <p>To get going, this file (index.html) includes some basic styles you can modify, play around with, or totally destroy to get going.</p>
-          <p>Once you've exhausted the fun in this document, you should check out:</p>
-          <div class="row">
-            <div class="large-4 medium-4 columns">
-              <p><a href="http://foundation.zurb.com/docs">Foundation Documentation</a><br />Everything you need to know about using the framework.</p>
-            </div>
-            <div class="large-4 medium-4 columns">
-              <p><a href="http://zurb.com/university/code-skills">Foundation Code Skills</a><br />These online courses offer you a chance to better understand how Foundation works and how you can master it to create awesome projects.</p>
-            </div>
-            <div class="large-4 medium-4 columns">
-              <p><a href="http://foundation.zurb.com/forum">Foundation Forum</a><br />Join the Foundation community to ask a question or show off your knowlege.</p>
-            </div>
+      <div class="small-3 medium-3 large-3 columns" data-sticky-container>
+          <div class="sticky" data-sticky>
+            <h3>Menu</h3>
+            <ul class="side-nav">
+              <li>{{#link-to "about"}}About{{/link-to}}</li>
+              <li>{{#link-to "recordings"}}Recordings{{/link-to}}</li>
+              <li>{{#link-to "collaborators"}}Collaborators{{/link-to}}</li>
+              <li>{{#link-to "videos"}}Videos{{/link-to}}</li>
+              <li>{{#link-to "contact"}}Contact{{/link-to}}</li>
+            </ul>
           </div>
-          <div class="row">
-            <div class="large-4 medium-4 medium-push-2 columns">
-              <p><a href="http://github.com/zurb/foundation">Foundation on Github</a><br />Latest code, issue reports, feature requests and more.</p>
-            </div>
-            <div class="large-4 medium-4 medium-pull-2 columns">
-              <p><a href="https://twitter.com/ZURBfoundation">@zurbfoundation</a><br />Ping us on Twitter if you have questions. When you build something with this we'd love to see it (and send you a totally boss sticker).</p>
-            </div>        
-          </div>
+      </div>
+      <div class="small-9 medium-9 large-9 columns">
+        <div class="panel callout primary">
+
+          {{outlet}}
+
         </div>
       </div>
     </div>
 
     <div class="row">
-      <div class="large-8 medium-8 columns">
-        <h5>Here&rsquo;s your basic grid:</h5>
-        <!-- Grid Example -->
-
-        <div class="row">
-          <div class="large-12 columns">
-            <div class="callout panel">
-              <p><strong>This is a twelve column section in a row.</strong> Each of these includes a div.panel element so you can see where the columns are - it's not required at all for the grid.</p>
-            </div>
-          </div>
+      <footer class="large-12 columns">
+        <div class="panel callout success">
+          <p>Footer footer this is about the footer stuff</p>
         </div>
-        <div class="row">
-          <div class="large-6 medium-6 columns">
-            <div class="callout panel">
-              <p>Six columns</p>
-            </div>
-          </div>
-          <div class="large-6 medium-6 columns">
-            <div class="callout panel">
-              <p>Six columns</p>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="large-4 medium-4 small-4 columns">
-            <div class="callout panel">
-              <p>Four columns</p>
-            </div>
-          </div>
-          <div class="large-4 medium-4 small-4 columns">
-            <div class="callout panel">
-              <p>Four columns</p>
-            </div>
-          </div>
-          <div class="large-4 medium-4 small-4 columns">
-            <div class="callout panel">
-              <p>Four columns</p>
-            </div>
-          </div>
-        </div>
-        
-        <hr />
-                
-        <h5>We bet you&rsquo;ll need a form somewhere:</h5>
-        <form>
-          <div class="row">
-            <div class="large-12 columns">
-              <label>Input Label</label>
-              <input type="text" placeholder="large-12.columns" />
-            </div>
-          </div>
-          <div class="row">
-            <div class="large-4 medium-4 columns">
-              <label>Input Label</label>
-              <input type="text" placeholder="large-4.columns" />
-            </div>
-            <div class="large-4 medium-4 columns">
-              <label>Input Label</label>
-              <input type="text" placeholder="large-4.columns" />
-            </div>
-            <div class="large-4 medium-4 columns">
-              <div class="row collapse">
-                <label>Input Label</label>
-                <div class="small-9 columns">
-                  <input type="text" placeholder="small-9.columns" />
-                </div>
-                <div class="small-3 columns">
-                  <span class="postfix">.com</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="large-12 columns">
-              <label>Select Box</label>
-              <select>
-                <option value="husker">Husker</option>
-                <option value="starbuck">Starbuck</option>
-                <option value="hotdog">Hot Dog</option>
-                <option value="apollo">Apollo</option>
-              </select>
-            </div>
-          </div>
-          <div class="row">
-            <div class="large-6 medium-6 columns">
-              <label>Choose Your Favorite</label>
-              <input type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">Radio 1</label>
-              <input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">Radio 2</label>
-            </div>
-            <div class="large-6 medium-6 columns">
-              <label>Check these out</label>
-              <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
-              <input id="checkbox2" type="checkbox"><label for="checkbox2">Checkbox 2</label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="large-12 columns">
-              <label>Textarea Label</label>
-              <textarea placeholder="small-12.columns"></textarea>
-            </div>
-          </div>
-        </form>
-      </div>     
-
-      <div class="large-4 medium-4 columns">
-        <h5>Try one of these buttons:</h5>
-        <p><a href="#" class="small button">Simple Button</a><br/>
-        <a href="#" class="small radius button">Radius Button</a><br/>
-        <a href="#" class="small round button">Round Button</a><br/>            
-        <a href="#" class="medium success button">Success Btn</a><br/>
-        <a href="#" class="medium alert button">Alert Btn</a><br/>
-        <a href="#" class="medium secondary button">Secondary Btn</a></p>           
-        <div class="panel">
-          <h5>So many components, girl!</h5>
-          <p>A whole kitchen sink of goodies comes with Foundation. Check out the docs to see them all, along with details on making them your own.</p>
-          <a href="http://foundation.zurb.com/docs/" class="small button">Go to Foundation Docs</a>          
-        </div>
-      </div>
+      </footer>
     </div>
+  </script>  <!-- End of Default Template -->
 
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="bower_components/foundation/js/foundation.min.js"></script>
-    <script src="js/app.js"></script>
-  </body>
+
+  <!-- =====
+    Default Landing Content
+  ===== -->
+  <script type="text/x-handlebars" data-template-name="index">
+    <section id="home">
+      <h2>Alina To</h2>
+      <p>is a Seattle-based violinist. You can learn about her here.</p>
+      {{#link-to "about"}}Go to About{{/link-to}}
+    </section>
+  </script> <!-- End of Default Landing Content -->
+
+  <!-- =====
+  About Page Template
+  ===== -->
+  <script type="text/x-handlebars" id="about">
+    <section class="">
+      <h2>Who is Alina?</h2>
+      <p>Alina To in-demand freelance performing and recording violinist in the Seattle area, currently active in the Passenger String Quartet, B’shnorkestra, Scrape, Tacoma Symphony Orchestra, and North Corner Chamber Orchestra.</p>
+
+      <p>She has collaborated with many musicians, artists and groups of various genres, including Judy Collins, Fleet Foxes, Macklemore, David Bazan (Pedro the Lion), Doug Martsch (Built to Spill), DJ Spooky and Joshua Roman, the Degenerate Art Ensemble, Jherek Bischoff, Eyvind Kang, Jim Knapp, Evan Flory-Barnes, Grand Hallway, Kris Orlowski, Spekulation, Trans Siberian Orchestra, Il Divo, Seattle Rock Orchestra, and Tacoma Symphony Orchestra. Besides actively performing and recording, Alina is a web developer who specializes in front-end development. She loves going on adventures, experimenting with food, and laughing.</p>
+
+        <p>Alina is available for in-studio violin recording sessions, live performances, and musical translations. Genres include classical, rock/pop, hip hop, jazz, and more. Please contact her via email (alina.to@gmail.com) for availability and rates.</p>
+    </section>
+
+  </script> <!-- End of About Page Template -->
+
+  <!-- =====
+  Contact Page Template
+  ===== -->
+  <script type="text/x-handlebars" id="contact">
+    <section id="contact" class="">
+      <h2>Contact</h2>
+      <p>Please contact me via email for performance, recording, and private lesson rates and availability. I look forward to hearing from you!<br>
+        alina.to@gmail.com
+      </p>
+
+    </section>
+  </script> <!-- End of Contact Page Template -->
+
+  <!-- =====
+  Collaborators Page Template
+  ===== -->
+  <script type="text/x-handlebars" id="collaborators">
+    <section id="collaborators" class="">
+      <h2>Collaborators</h2>
+      <p>Alina has collaborated with a bunch of awesome people.</p>
+        <ul>
+          <li>Passenger String Quartet</li>
+          <li>Fleet Foxes</li>
+          <li>DJ Spooky</li>
+          <li>Judy Collins</li>
+          <li>Doug Martsch (of Built to Spill)</li>
+          <li>David Bazan (of Pedro the Lion)</li>
+          <li>Macklemore</li>
+          <li>Scrape</li>
+          <li>B’shnorkestra</li>
+          <li>North Corner Chamber Orchestra (NOCCO) </li>
+          <li>Tacoma Symphony Orchestra</li>
+          <li>Bellevue Philharmonic Orchestra</li>
+          <li>Lake Union Civic Orchestra</li>
+          <li>Trans Siberian Orchestra</li>
+          <li>Seattle Rock Orchestra</li>
+          <li>Degenerate Art Ensemble</li>
+          <li>Ahamefule Oluo</li>
+          <li>Evan Flory-Barnes</li>
+          <li>Victoria Contreras</li>
+          <li>Grand Hallway</li>
+          <li>Jherek Bischoff</li>
+          <li>Eyvind Kang</li>
+          <li>Spekulation</li>
+          <li>Il Divo</li>
+          <li>Jim Knapp</li>
+          <li>Saeta</li>
+          <li>OK Sweetheart</li>
+          <li>Vikesh Kapoor</li>
+        </ul>
+    </section>
+  </script> <!-- End of Collaborators Page Template -->
+
+  <!-- =====
+  Recordings Page Template
+  ===== -->
+  <script type="text/x-handlebars" id="recordings">
+    <section class="">
+      <h2 class="text-center">Recordings</h2>
+      <p>Alina has appeared on at least {{totalRecordings}} recordings!</p>
+      <div>
+        <ul>
+        {{#each}}
+          <li>
+          {{#link-to 'recording' this}}
+            {{title}} ({{year}})
+          {{/link-to}}
+          by {{artist}}
+          </li>
+        {{/each}}
+        </ul>
+      </div>
+
+      <div>
+        {{outlet}}
+      </div>
+    </section>
+  </script>
+
+  <script type="text/x-handlebars" id="recording">
+    <section id="recording" class="">
+      <h2>{{recordingTitle}} ({{year}})</h2>
+      <p>Some extra info here</p>
+    </section>
+  </script>
+
+  <!-- =====
+  Videos Page Template
+  ===== -->
+  <script type="text/x-handlebars" id="videos">
+    <section id="videos" class="">
+      <h2 class="text-center">Videos</h2>
+
+      <h6 class="text-center">Fleet Foxes Bedouin Dress</h6>
+      <div class="flex-video">
+        <iframe width="420" height="315" src="https://www.youtube.com/embed/lH3r8Y0ThrQ" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <h6 class="text-center">Another video here</h6>
+      <div class="flex-video">
+        <iframe width="420" height="315" src="https://www.youtube.com/embed/lH3r8Y0ThrQ" frameborder="0" allowfullscreen></iframe>
+      </div>
+
+    </section>
+  </script> <!-- End of Contact Page Template -->
+
+  <script src="js/libs/jquery-1.10.2.js"></script>
+  <script src="js/libs/handlebars-1.1.2.js"></script>
+  <script src="js/libs/ember.min.js"></script>
+  <script src="bower_components/foundation/js/foundation.min.js"></script>
+  <script src="js/libs/ember-data.js"></script>
+  <script src="js/libs/localstorage_adapter.js"></script>
+
+  <script src="js/app.js"></script>
+
+</body>
 </html>
+
